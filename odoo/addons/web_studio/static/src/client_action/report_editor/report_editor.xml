@@ -1,0 +1,27 @@
+<templates>
+
+<t t-name="web_studio.ReportEditor">
+    <div class="o-web-studio-report-editor h-100 w-100 d-flex flex-row">
+        <ReportEditorWysiwyg t-if="reportEditorModel.mode === 'wysiwyg'" paperFormatStyle="paperFormatStyle" />
+
+        <ReportEditorXml t-if="reportEditorModel.mode === 'xml'" paperFormatStyle="paperFormatStyle" />
+    </div>
+</t>
+
+<t t-name="web_studio.ReportEditor.Iframe">
+    <div class="h-100 w-100 overflow-auto position-relative" t-on-scroll="onContainerScroll">
+        <div class="o-web-studio-report-container my-0 mx-auto my-lg-5 bg-white" t-att-style="paperFormatStyle">
+            <iframe class="w-100" t-ref="iframeRef" t-att-srcdoc="iframeSource" t-key="iframeKey" t-att-style="iframeStyle" type="text/plain" t-on-load="onIframeLoaded"/>
+        </div>
+    </div>
+</t>
+
+<t t-name="web_studio.ReportEditor.NotificationError">
+    <div>
+        Saving the report "<t t-esc="reportName" />" failed.
+        <p>This may be due to an incorrect syntax in the edited parts.</p>
+        <p t-if="!recordId">This could also be due to the absence of a real record to render the report with.</p>
+    </div>
+</t>
+
+</templates>
