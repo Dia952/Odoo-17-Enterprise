@@ -1,0 +1,462 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_enterprise
+#
+# Translators:
+# sharkutz <sharkutz4life@yahoo.com>, 2022
+# Foldi Robert <foldirobert@nexterp.ro>, 2022
+# Martin Trigaux, 2022
+# Hongu Cosmin <cosmin513@gmail.com>, 2022
+# Dorin Hongu <dhongu@gmail.com>, 2023
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-16 16:03+0000\n"
+"PO-Revision-Date: 2022-09-22 05:49+0000\n"
+"Last-Translator: Dorin Hongu <dhongu@gmail.com>, 2023\n"
+"Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.js:0
+#, python-format
+msgid "%s days"
+msgstr "%s zile"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/settings_form_view/res_config_edition.xml:0
+#, python-format
+msgid "(Enterprise Edition)"
+msgstr "(Ediție Enterprise)"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid ") with the instructions to follow"
+msgstr ") cu instrucțiunile de urmat"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.js:0
+#, python-format
+msgid "1 month"
+msgstr "o lună"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/promote_studio.xml:0
+#: code:addons/web_enterprise/static/src/views/list/list_renderer_desktop.xml:0
+#, python-format
+msgid "Add Custom Field"
+msgstr "Adaugă câmp personalizat"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/promote_studio.xml:0
+#: code:addons/web_enterprise/static/src/webclient/promote_studio_dialog/promote_studio_dialog.xml:0
+#, python-format
+msgid "Add new fields and much more with"
+msgstr "Adăugați câmpuri noi și multe altele cu"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/control_panel.xml:0
+#, python-format
+msgid "CLEAR"
+msgstr "ȘTERGE"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Click here to send an email"
+msgstr "Faceți clic aici pentru a trimite un e-mail"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/promote_studio.xml:0
+#: code:addons/web_enterprise/static/src/webclient/promote_studio_dialog/promote_studio_dialog.xml:0
+#, python-format
+msgid "Close"
+msgstr "Închide"
+
+#. module: web_enterprise
+#: model:ir.model,name:web_enterprise.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: web_enterprise
+#: model:ir.model,name:web_enterprise.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Contact your sales representative to help you to unlink your previous database"
+msgstr "Contactați reprezentantul de vânzări pentru a vă ajuta să dezactivați baza de date anterioară"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/control_panel.xml:0
+#, python-format
+msgid "Control panel toolbar"
+msgstr "Bara de instrumente a panoului de control"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/color_scheme/color_scheme_menu_items.js:0
+#, python-format
+msgid "Dark Mode"
+msgstr "Modul întunecat"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/settings_form_view/res_config_edition.xml:0
+#, python-format
+msgid "Database expiration:"
+msgstr "Expirarea bazei de date:"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Dismiss"
+msgstr "Destituire"
+
+#. module: web_enterprise
+#: model:ir.actions.server,name:web_enterprise.download_contact
+msgid "Download (vCard)"
+msgstr "Descarcă (vCard)"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Error reason:"
+msgstr "Motiv eroare:"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/control_panel.xml:0
+#, python-format
+msgid "FILTER"
+msgstr "FILTRU"
+
+#. module: web_enterprise
+#: model:ir.model,name:web_enterprise.model_ir_http
+msgid "HTTP Routing"
+msgstr "Rutare HTTP"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/navbar/navbar.js:0
+#, python-format
+msgid "Home menu"
+msgstr "Meniu principal"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/promote_studio.xml:0
+#: code:addons/web_enterprise/static/src/webclient/promote_studio_dialog/promote_studio_dialog.xml:0
+#, python-format
+msgid "Install Odoo Studio"
+msgstr "Instalați Odoo Studio"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Log in as an administrator to correct the issue."
+msgstr "Conectați-vă ca administrator pentru a remedia problema."
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Login to your Odoo.com dashboard then unlink your previous database:"
+msgstr "Autentificați-vă în panoul de control Odoo.com, apoi dezactivați baza de date anterioară:"
+
+#. module: web_enterprise
+#: model:ir.model,name:web_enterprise.model_ir_ui_menu
+msgid "Menu"
+msgstr "Meniu"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/home_menu.xml:0
+#, python-format
+msgid "No result"
+msgstr "Fără rezultate"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/settings_form_view/res_config_edition.xml:0
+#: model_terms:ir.ui.view,arch_db:web_enterprise.res_config_settings_view_form
+#, python-format
+msgid "Odoo"
+msgstr "Odoo"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/settings_form_view/res_config_edition.xml:0
+#, python-format
+msgid "Odoo Enterprise Edition License V1.0"
+msgstr "Licență Odoo Enterprise Edition V1.0"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/promote_studio.xml:0
+#: code:addons/web_enterprise/static/src/webclient/promote_studio_dialog/promote_studio_dialog.xml:0
+#, python-format
+msgid "Odoo Studio"
+msgstr "Odoo Studio"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Odoo Support"
+msgstr "Suport Odoo"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Paste code here"
+msgstr "Inserați codul aici"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/navbar/navbar.js:0
+#, python-format
+msgid "Previous view"
+msgstr "Vedere anterioară"
+
+#. module: web_enterprise
+#: model_terms:ir.ui.view,arch_db:web_enterprise.res_config_settings_view_form
+msgid "Progressive Web App"
+msgstr ""
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Refresh subscription status"
+msgstr "Reîmprospătați starea abonamentului"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Register your subscription"
+msgstr "Înregistrați-vă abonamentul"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Renew your subscription"
+msgstr "Reînnoiește-ți abonamentul"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/control_panel.xml:0
+#, python-format
+msgid "SEE RESULT"
+msgstr "AFIȘEAZĂ REZULTATE"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/barcode_fields.xml:0
+#, python-format
+msgid "Scan barcode"
+msgstr "Scanare cod de bare"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Sending the instructions by email ..."
+msgstr "Trimiterea instrucțiunilor prin e-mail ..."
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Something went wrong while registering your database. You can try again or contact"
+msgstr "Ceva nu a mers bine în timp ce se înregistra baza de date. Puteți încerca din nou sau contactați"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Subscription Code:"
+msgstr "Cod de abandonment:"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/home_menu.xml:0
+#, python-format
+msgid "TIP"
+msgstr "SUGESTIE"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Thank you, your registration was successful! Your database is valid until"
+msgstr "Mulțumesc, înregistrarea dvs. a avut succes! Baza dvs. de date este valabilă până"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/enterprise_subscription_service.js:0
+#, python-format
+msgid "Thank you, your registration was successful! Your database is valid until %s."
+msgstr "Mulțumesc, înregistrarea dvs. a avut succes! Baza dvs. de date este valabilă până la %s."
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "The instructions to unlink your subscription from the previous database(s) have been sent"
+msgstr "Instrucțiunile pentru deconectarea abonamentului de la baza de date precedentă (e) au fost trimise"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.js:0
+#, python-format
+msgid "This database has expired. "
+msgstr "Această bază de date a expirat. "
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.js:0
+#, python-format
+msgid "This database will expire in %s. "
+msgstr "Această bază de date va expira în %s. "
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.js:0
+#, python-format
+msgid "This demo database will expire in %s. "
+msgstr "Această bază de date demo va expira în %s. "
+
+#. module: web_enterprise
+#: model_terms:ir.ui.view,arch_db:web_enterprise.res_config_settings_view_form
+msgid "This name will be used for the application when Odoo is installed through the browser."
+msgstr ""
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "To unlink it you can either:"
+msgstr "Pentru a o deconecta, puteți:"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/control_panel.xml:0
+#, python-format
+msgid "Today"
+msgstr "Astăzi"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Unable to send the instructions by email, please contact the"
+msgstr "Nu s-au putut trimite instrucțiunile pe e-mail, vă rugăm contactați"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Upgrade your subscription"
+msgstr "Actualizați abonamentul"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/legacy/xml/control_panel.xml:0
+#, python-format
+msgid "View switcher"
+msgstr "Comutator de vizualizare"
+
+#. module: web_enterprise
+#: model:ir.model.fields,field_description:web_enterprise.field_res_config_settings__web_app_name
+msgid "Web App Name"
+msgstr ""
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "You have more users or more apps installed than your subscription allows."
+msgstr "Aveți mai mulți utilizatori sau mai multe aplicații instalate decât vă permite abonamentul."
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "You will be able to register your database once you have installed your first app."
+msgstr "Veți putea să vă înregistrați baza de date după ce ați instalat prima aplicație."
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Your subscription code"
+msgstr "Codul dvs. de abonament"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Your subscription is already linked to a database."
+msgstr "Abonamentul dvs. este deja conectat la o bază de date."
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "Your subscription was updated and is valid until"
+msgstr "Abonamentul dvs. a fost actualizat și este valabil până la"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "buy a subscription"
+msgstr "achiziționați un abonament."
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "or"
+msgstr "sau"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/expiration_panel.xml:0
+#, python-format
+msgid "to the subscription owner (email:"
+msgstr "proprietarului abonamentului (e-mail:"
+
+#. module: web_enterprise
+#. odoo-javascript
+#: code:addons/web_enterprise/static/src/webclient/home_menu/home_menu.xml:0
+#, python-format
+msgid "— open me anywhere with"
+msgstr "— deschide-mă oriunde cu"

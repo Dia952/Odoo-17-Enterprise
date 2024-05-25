@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_payslip_document" inherit_id="hr_payroll.report_payslip" primary="True">
+        <xpath expr="//tr[@id='employee_info_line_1']/td[2]" position="replace" />
+        <xpath expr="//tr[@id='employee_info_line_2']/td[2]" position="replace" />
+        <xpath expr="//span[@t-field='o.employee_id.job_title']" position="replace">
+            <span t-field="o.employee_id.contract_id.job_id.name"></span>
+        </xpath>
+        <xpath expr="//span[@t-field='o.employee_id.private_street']" position="replace">
+            <span t-field="o.employee_id.private_street"></span>
+        </xpath>
+        <xpath expr="//span[@t-field='o.employee_id.private_city']" position="replace">
+            <span t-field="o.employee_id.private_city"></span>
+        </xpath>
+        <xpath expr="//tr[@id='employee_info_line_3']" position="replace" />
+        <xpath expr="//tr[@id='employee_info_line_4']" position="replace" />
+        <xpath expr="//tr[@id='employee_info_line_5']" position="replace">
+            <td><span t-field="o.employee_id.work_email">demo@email.com</span></td>
+        </xpath>
+        <xpath expr="//tr[@id='employee_info_line_6']" position="replace" />
+        <xpath expr="//tr[@id='employee_info_line_7']" position="replace" />
+        <xpath expr="//tr[@id='employee_info_line_1']" position="inside">
+            <td class="w-25"><strong>Address</strong></td>
+        </xpath>
+        <xpath expr="//tr[@id='employee_info_line_2']" position="inside">
+            <td><span t-field="o.employee_id.private_street"></span> <span t-field="o.employee_id.private_city"></span></td>
+        </xpath>
+        <xpath expr="//div[@id='to_pay']" position="replace" />
+
+    </template>
+
+    <template id="report_payslip">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="o" t-value="o.with_context(lang=o.employee_id.sudo().lang or o.env.lang)"/>
+                <t t-call="l10n_hk_hr_payroll.report_payslip_document" t-lang="o.env.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>
