@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_company_ch" model="res.company">
+        <field name="name">My Swiss Company</field>
+        <field name="currency_id" ref="base.EUR"/>
+        <field name="street">Leberngasse 21</field>
+        <field name="zip">4600</field>
+        <field name="city">Olten</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="currency_id" ref="base.CHF"/>
+        <field name="l10n_ch_post_box">690</field>
+        <field name="l10n_ch_uid">CHE-123.456.789</field>
+    </record>
+
+    <record id="base.user_admin" model="res.users">
+        <field name="company_ids" eval="[(4, ref('l10n_ch_hr_payroll.res_company_ch'))]"/>
+    </record>
+
+    <record id="base.user_demo" model="res.users">
+        <field name="company_ids" eval="[(4, ref('l10n_ch_hr_payroll.res_company_ch'))]"/>
+    </record>
+
+    <record id="hr_department_rdch" model="hr.department">
+        <field name="name">RD CH</field>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+    </record>
+
+    <record id="job_developer_switzerland" model="hr.job">
+        <field name="name">Experienced Developer CH</field>
+        <field name="department_id" ref="hr_department_rdch"/>
+        <field name="no_of_recruitment">5</field>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+    </record>
+
+    <record id="hr_employee_hans" model="hr.employee">
+        <field name="name">Hans Müller</field>
+        <field name="job_id" ref="job_developer_switzerland"/>
+        <field name="country_id" ref="base.ch"/>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+        <field name="image_1920" type="base64" file="l10n_ch_hr_payroll/static/img/hr_employee_hans_muller.jpg"/>
+        <field name="gender">male</field>
+        <field name="l10n_ch_canton">FR</field>
+        <field name="l10n_ch_tax_scale">A</field>
+    </record>
+
+    <record id="res_partner_ruth_schmid" model="res.partner">
+        <field name="name">Ruth Schmid</field>
+        <field name="street">Im Sandbüel 23</field>
+        <field name="city">Frinvillier</field>
+        <field name="zip">2535</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="phone">+0032476543210</field>
+        <field name="email">ruth.schmid@example.com</field>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+    </record>
+
+    <record id="user_ruth_schmid" model="res.users">
+        <field name="partner_id" ref="l10n_ch_hr_payroll.res_partner_ruth_schmid"/>
+        <field name="login">ruthschmid</field>
+        <field name="password">ruthschmid</field>
+        <field name="signature" type="html"><span>--<br/>+R. Schmid</span></field>
+        <field name="company_ids" eval="[(4, ref('l10n_ch_hr_payroll.res_company_ch'))]"/>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="image_1920" type="base64" file="l10n_ch_hr_payroll/static/img/hr_employe_ruth_schmid.jpg"/>
+    </record>
+
+    <record id="res_partner_ruth_schmid_work_address" model="res.partner">
+        <field name="name">Swiss Offices</field>
+        <field name="street">Damunt 18</field>
+        <field name="city">Obersulz</field>
+        <field name="zip">5085</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+    </record>
+
+    <record id="l10n_ch_location_unit_work_location" model="l10n.ch.location.unit">
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+        <field name="partner_id" ref="l10n_ch_hr_payroll.res_partner_ruth_schmid_work_address"/>
+        <field name="bur_ree_number">A23456788</field>
+        <field name="canton">BE</field>
+        <field name="dpi_number">3346</field>
+        <field name="municipality">351</field>
+    </record>
+
+    <record id="res_partner_ruth_schmid_work_contact" model="res.partner">
+        <field name="name">Ruth Schmid</field>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+    </record>
+
+    <record id="res_partner_bank_account_ruth_schmid" model="res.partner.bank">
+        <field name="acc_number">CH9789144829733648596</field>
+        <field name="bank_id" ref="base.bank_ing"/>
+        <field name="partner_id" ref="l10n_ch_hr_payroll.res_partner_ruth_schmid_work_contact"/>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+    </record>
+
+    <record id="hr_employee_ruth_schmid" model="hr.employee">
+        <field name="name">Ruth Schmid (rsc)</field>
+        <field name="gender">female</field>
+        <field name="marital">single</field>
+        <field name="job_title">Software Developer</field>
+        <field name="private_street">Via Luzzas 150</field>
+        <field name="private_city">Feldis</field>
+        <field name="private_zip">7404</field>
+        <field name="private_country_id" ref="base.ch"/>
+        <field name="private_phone">+0032476543210</field>
+        <field name="private_email">ruth.schmid@example.com</field>
+        <field name="work_contact_id" ref="l10n_ch_hr_payroll.res_partner_ruth_schmid_work_contact"/>
+        <field name="address_id" ref="l10n_ch_hr_payroll.res_partner_ruth_schmid_work_address"/>
+        <field name="emergency_contact">Knutt Schmid</field>
+        <field name="emergency_phone">+0032498765432</field>
+        <field name="birthday">1991-07-28</field>
+        <field name="lang">en_US</field>
+        <field name="km_home_work">25</field>
+        <field name="place_of_birth">Switzerland</field>
+        <field name="country_of_birth" ref="base.ch"/>
+        <field name="study_field">Civil Engineering</field>
+        <field name="study_school">Université Catholique de Bern</field>
+        <field name="parent_id" ref="l10n_ch_hr_payroll.hr_employee_hans"/>
+        <field name="country_id" ref="base.ch"/>
+        <field name="resource_calendar_id" ref="resource.resource_calendar_std"/>
+        <field name="identification_id">8752027365496</field>
+        <field name="bank_account_id" ref="l10n_ch_hr_payroll.res_partner_bank_account_ruth_schmid"/>
+        <field name="image_1920" type="base64" file="l10n_ch_hr_payroll/static/img/hr_employe_ruth_schmid.jpg"/>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+        <field name="user_id" ref="l10n_ch_hr_payroll.user_ruth_schmid"/>
+        <field name="l10n_ch_canton">FR</field>
+        <field name="l10n_ch_tax_scale">A</field>
+        <field name="l10n_ch_sv_as_number">756.1848.4786.64</field>
+        <field name="l10n_ch_marital_from" eval="(DateTime.today() + relativedelta(years=-1, month=1, day=1))"/>
+        <field name="l10n_ch_spouse_sv_as_number">756.6549.9078.26</field>
+        <field name="spouse_birthdate" eval="(DateTime.today() + relativedelta(years=-25, month=1, day=1))"/>
+        <field name="l10n_ch_spouse_work_canton">BE</field>
+        <field name="l10n_ch_spouse_work_start_date" eval="(DateTime.today() + relativedelta(years=-3))"/>
+        <field name="l10n_ch_municipality">351</field>
+        <field name="certificate">higherEducationMaster</field>
+    </record>
+
+    <record id="hr_employee_children_1" model="l10n.ch.hr.employee.children">
+        <field name="name">Eva Schmid</field>
+        <field name="employee_id" ref="l10n_ch_hr_payroll.hr_employee_ruth_schmid"/>
+        <field name="birthdate" eval="(DateTime.today() + relativedelta(years=-5, month=1, day=1))"/>
+        <field name="deduction_start" eval="(DateTime.today() + relativedelta(years=-5, month=1, day=1))"/>
+    </record>
+
+    <record id="hr_employee_children_2" model="l10n.ch.hr.employee.children">
+        <field name="name">Fritz Schmid</field>
+        <field name="employee_id" ref="l10n_ch_hr_payroll.hr_employee_ruth_schmid"/>
+        <field name="birthdate" eval="(DateTime.today() + relativedelta(years=-9, month=1, day=1))"/>
+        <field name="deduction_start" eval="(DateTime.today() + relativedelta(years=-9, month=1, day=1))"/>
+    </record>
+
+    <record id="l10n_ch_social_insurance" model="l10n.ch.social.insurance">
+        <field name="name">Social Insurance AK Bern</field>
+        <field name="member_number">2948</field>
+        <field name="member_subnumber">2292490</field>
+        <field name="insurance_company">002.000</field>
+    </record>
+
+    <record id="l10n_ch_social_insurance_avs_line" model="l10n.ch.social.insurance.avs.line">
+        <field name="insurance_id" ref="l10n_ch_social_insurance"/>
+        <field name="date_from" eval="time.strftime('2020-01-01')"/>
+        <field name="date_to" eval="False"/>
+        <field name="employee_rate">5.3</field>
+        <field name="employer_rate">5.3</field>
+    </record>
+
+    <record id="l10n_ch_social_insurance_ac_line" model="l10n.ch.social.insurance.ac.line">
+        <field name="insurance_id" ref="l10n_ch_social_insurance"/>
+        <field name="date_from" eval="time.strftime('2020-01-01')"/>
+        <field name="date_to" eval="False"/>
+        <field name="employee_rate">1.1</field>
+        <field name="employer_rate">1.1</field>
+        <field name="employee_additional_rate">0.5</field>
+        <field name="employer_additional_rate">0</field>
+    </record>
+
+    <record id="res_partner_groupe_mutuel" model="res.partner">
+        <field name="name">Groupe Mutuel</field>
+        <field name="street">Im Sandbüel 23</field>
+        <field name="city">Frinvillier</field>
+        <field name="zip">5000</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+    </record>
+
+    <record id="l10n_ch_compensation_fund" model="l10n.ch.compensation.fund">
+        <field name="name">Family Allowance AK Bern</field>
+        <field name="member_number">2948</field>
+        <field name="member_subnumber">2292490</field>
+        <field name="insurance_company">002.000</field>
+    </record>
+
+    <record id="l10n_ch_compensation_fund_line" model="l10n.ch.compensation.fund.line">
+        <field name="insurance_id" ref="l10n_ch_compensation_fund"/>
+        <field name="date_from" eval="time.strftime('2020-01-01')"/>
+        <field name="date_to" eval="False"/>
+        <field name="employee_rate">0.421</field>
+    </record>
+
+    <record id="l10n_ch_accident_insurance" model="l10n.ch.accident.insurance">
+        <field name="name">Accident Insurance Groupe Mutuel</field>
+        <field name="customer_number">10403</field>
+        <field name="contract_number">10390</field>
+        <field name="insurance_company">S270</field>
+        <field name="insurance_company_address_id" ref="res_partner_groupe_mutuel"/>
+    </record>
+
+    <record id="l10n_ch_accident_insurance_line" model="l10n.ch.accident.insurance.line">
+        <field name="insurance_id" ref="l10n_ch_accident_insurance"/>
+        <field name="solution_name">UVG solution A1</field>
+        <field name="solution_type">A</field>
+        <field name="solution_number">1</field>
+    </record>
+
+    <record id="l10n_ch_accident_insurance_line_rate" model="l10n.ch.accident.insurance.line.rate">
+        <field name="line_id" ref="l10n_ch_accident_insurance_line"/>
+        <field name="date_from" eval="time.strftime('2020-01-01')"/>
+        <field name="date_to" eval="False"/>
+        <field name="threshold">148200</field>
+        <field name="occupational_male_rate">2</field>
+        <field name="occupational_female_rate">2</field>
+        <field name="non_occupational_male_rate">1.168</field>
+        <field name="non_occupational_female_rate">1.168</field>
+        <field name="employer_occupational_part">50</field>
+        <field name="employer_non_occupational_part">50</field>
+    </record>
+
+    <record id="l10n_ch_additional_accident_insurance" model="l10n.ch.additional.accident.insurance">
+        <field name="name">Additional Accident Insurance Groupe Mutuel</field>
+        <field name="customer_number">10405</field>
+        <field name="contract_number">10393</field>
+        <field name="insurance_company">S270</field>
+        <field name="insurance_company_address_id" ref="res_partner_groupe_mutuel"/>
+    </record>
+
+    <record id="l10n_ch_additional_accident_insurance_line" model="l10n.ch.additional.accident.insurance.line">
+        <field name="insurance_id" ref="l10n_ch_additional_accident_insurance"/>
+        <field name="solution_name">UVG solution A1</field>
+        <field name="solution_type">A</field>
+        <field name="solution_number">1</field>
+    </record>
+
+    <record id="l10n_ch_additional_accident_insurance_line_rate" model="l10n.ch.additional.accident.insurance.line.rate">
+        <field name="line_id" ref="l10n_ch_additional_accident_insurance_line"/>
+        <field name="date_from" eval="time.strftime('2020-01-01')"/>
+        <field name="date_to" eval="False"/>
+        <field name="wage_from">0</field>
+        <field name="wage_to">148200</field>
+        <field name="male_rate">2</field>
+        <field name="female_rate">2</field>
+        <field name="employer_part">50</field>
+    </record>
+
+    <record id="l10n_ch_sickness_insurance" model="l10n.ch.sickness.insurance">
+        <field name="name">Sickness Insurance Groupe Mutuel</field>
+        <field name="customer_number">10405</field>
+        <field name="contract_number">10393</field>
+        <field name="insurance_company">S270</field>
+        <field name="insurance_company_address_id" ref="res_partner_groupe_mutuel"/>
+    </record>
+
+    <record id="l10n_ch_sickness_insurance_line" model="l10n.ch.sickness.insurance.line">
+        <field name="insurance_id" ref="l10n_ch_sickness_insurance"/>
+        <field name="solution_name">IJM solution A1</field>
+        <field name="solution_type">A</field>
+        <field name="solution_number">1</field>
+    </record>
+
+    <record id="l10n_ch_sickness_insurance_line_rate" model="l10n.ch.sickness.insurance.line.rate">
+        <field name="line_id" ref="l10n_ch_sickness_insurance_line"/>
+        <field name="date_from" eval="time.strftime('2020-01-01')"/>
+        <field name="date_to" eval="False"/>
+        <field name="wage_from">0</field>
+        <field name="wage_to">148200</field>
+        <field name="male_rate">1</field>
+        <field name="female_rate">1</field>
+        <field name="employer_part">50</field>
+    </record>
+
+    <record id="l10n_ch_lpp_insurance" model="l10n.ch.lpp.insurance">
+        <field name="name">LPP Insurance Groupe Mutuel</field>
+        <field name="customer_number">30405</field>
+        <field name="contract_number">40393</field>
+        <field name="insurance_company_address_id" ref="res_partner_groupe_mutuel"/>
+        <field name="fund_number">209230</field>
+    </record>
+
+    <record id="hr_contract_cdi_ruth_schmid_previous" model="hr.contract">
+        <field name="name">CDI - Ruth Schmid - Experienced Developer</field>
+        <field name="department_id" ref="hr_department_rdch"/>
+        <field name="employee_id" ref="hr_employee_ruth_schmid"/>
+        <field name="job_id" ref="l10n_ch_hr_payroll.job_developer_switzerland"/>
+        <field name="structure_type_id" ref="l10n_ch_hr_payroll.structure_type_employee_ch"/>
+        <field name="wage">12000</field>
+        <field name="state">close</field>
+        <field name="hr_responsible_id" ref="base.user_demo"/>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+        <field name="date_start" eval="(DateTime.today() + relativedelta(years=-2, month=1, day=1))"/>
+        <field name="date_end" eval="(DateTime.today() + relativedelta(years=-1, month=1, day=1, days=-2))"/>
+        <field name="resource_calendar_id" model="resource.calendar" eval="obj().search([('company_id', '=', obj().env.ref('l10n_ch_hr_payroll.res_company_ch').id)], limit=1)"/>
+        <field name="l10n_ch_job_type">middleCadre</field>
+        <field name="contract_type_id" ref="l10n_ch_contract_type_indefiniteSalaryMth"/>
+        <field name="l10n_ch_social_insurance_id" ref="l10n_ch_hr_payroll.l10n_ch_social_insurance"/>
+        <field name="l10n_ch_lpp_insurance_id" ref="l10n_ch_hr_payroll.l10n_ch_lpp_insurance"/>
+        <field name="l10n_ch_accident_insurance_line_id" ref="l10n_ch_hr_payroll.l10n_ch_accident_insurance_line"/>
+        <field name="l10n_ch_additional_accident_insurance_line_ids" eval="[(4, ref('l10n_ch_hr_payroll.l10n_ch_additional_accident_insurance_line'))]"/>
+        <field name="l10n_ch_sickness_insurance_line_ids" eval="[(4, ref('l10n_ch_hr_payroll.l10n_ch_sickness_insurance_line'))]"/>
+        <field name="l10n_ch_compensation_fund_id" ref="l10n_ch_hr_payroll.l10n_ch_compensation_fund"/>
+        <field name="l10n_ch_thirteen_month" eval="True"/>
+    </record>
+
+    <record id="hr_contract_cdi_ruth_schmid" model="hr.contract">
+        <field name="name">CDI - Ruth Schmid - Experienced Developer</field>
+        <field name="department_id" ref="hr_department_rdch"/>
+        <field name="employee_id" ref="hr_employee_ruth_schmid"/>
+        <field name="job_id" ref="l10n_ch_hr_payroll.job_developer_switzerland"/>
+        <field name="structure_type_id" ref="l10n_ch_hr_payroll.structure_type_employee_ch"/>
+        <field name="wage">14000</field>
+        <field name="state">open</field>
+        <field name="hr_responsible_id" ref="base.user_demo"/>
+        <field name="company_id" ref="l10n_ch_hr_payroll.res_company_ch"/>
+        <field name="date_start" eval="(DateTime.today() + relativedelta(years=-1, month=1, day=1, days=-1))"/>
+        <field name="resource_calendar_id" model="resource.calendar" eval="obj().search([('company_id', '=', obj().env.ref('l10n_ch_hr_payroll.res_company_ch').id)], limit=1)"/>
+        <field name="l10n_ch_job_type">middleCadre</field>
+        <field name="contract_type_id" ref="l10n_ch_contract_type_indefiniteSalaryMth"/>
+        <field name="l10n_ch_social_insurance_id" ref="l10n_ch_hr_payroll.l10n_ch_social_insurance"/>
+        <field name="l10n_ch_lpp_insurance_id" ref="l10n_ch_hr_payroll.l10n_ch_lpp_insurance"/>
+        <field name="l10n_ch_accident_insurance_line_id" ref="l10n_ch_hr_payroll.l10n_ch_accident_insurance_line"/>
+        <field name="l10n_ch_additional_accident_insurance_line_ids" eval="[(4, ref('l10n_ch_hr_payroll.l10n_ch_additional_accident_insurance_line'))]"/>
+        <field name="l10n_ch_sickness_insurance_line_ids" eval="[(4, ref('l10n_ch_hr_payroll.l10n_ch_sickness_insurance_line'))]"/>
+        <field name="l10n_ch_compensation_fund_id" ref="l10n_ch_hr_payroll.l10n_ch_compensation_fund"/>
+        <field name="l10n_ch_thirteen_month" eval="True"/>
+    </record>
+
+    <record id="hr_employee_ruth_schmid" model="hr.employee">
+        <field name="contract_id" ref="l10n_ch_hr_payroll.hr_contract_cdi_ruth_schmid"/>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pos_blackbox_be.WorkButton">
+        <span class="control-button order-printbill btn btn-light rounded-0 fw-bolder" t-att-class="{'disabled': state.buttonDisabled}" t-on-click="() => this.click()">
+            <i class="fa fa-print me-1"></i>
+            <span> </span>
+            <span>Work
+                <t t-if="state.status">Out</t>
+                <t t-else="">In</t>
+            </span>
+        </span>
+    </t>
+
+</templates>

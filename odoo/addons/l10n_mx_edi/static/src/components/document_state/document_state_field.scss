@@ -1,0 +1,21 @@
+.l10n_mx_edi_document_state_popover {
+    float: left;
+    margin: 1rem;
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.l10n_mx_edi_document_state_popover_clone {
+    border: none;
+    color: $o-gray-300;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 0;
+    text-align: center;
+
+    &:hover {
+        color: $o-enterprise-action-color !important;
+        cursor: pointer;
+    }
+}

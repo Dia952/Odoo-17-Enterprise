@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_enterprise
+#
+# Translators:
+# Dorin Hongu <dhongu@gmail.com>, 2022
+# Foldi Robert <foldirobert@nexterp.ro>, 2022
+# Martin Trigaux, 2022
+# Cozmin Candea <office@terrabit.ro>, 2023
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-20 09:50+0000\n"
+"PO-Revision-Date: 2022-09-22 05:50+0000\n"
+"Last-Translator: Cozmin Candea <office@terrabit.ro>, 2023\n"
+"Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#. module: website_enterprise
+#: model:website.configurator.feature,name:website_enterprise.feature_module_appointment
+msgid "Appointment"
+msgstr "Întâlnire"
+
+#. module: website_enterprise
+#. openerp-web
+#: code:addons/website_enterprise/static/src/js/systray_items/new_content.js:0
+#, python-format
+msgid "Appointment Form"
+msgstr "Formular Întâlnire"
+
+#. module: website_enterprise
+#: model:website.configurator.feature,name:website_enterprise.feature_module_helpdesk
+msgid "Helpdesk"
+msgstr "Serviciu de asistenta tehnica"
+
+#. module: website_enterprise
+#: model:website.configurator.feature,description:website_enterprise.feature_module_helpdesk
+msgid "Offer support with a ticketing system"
+msgstr "Oferta de asistență cu un sistem de ticketing"
+
+#. module: website_enterprise
+#: model:website.configurator.feature,description:website_enterprise.feature_module_appointment
+msgid "Self-service booking system"
+msgstr "Sistem de rezervare auto-service"
